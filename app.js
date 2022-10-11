@@ -11,7 +11,7 @@ app.listen(3000, () => {
 })
 
 app.get('/register', (req,res) => {
-    res.sendFile(__dirname + '/views/register.html')
+    res.sendFile(__dirname + '/views/register.html')                     
 })
  app.get('/login', (req,res) => {
     res.sendFile(__dirname + '/views/login.html')
