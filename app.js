@@ -6,8 +6,9 @@ app.use(express.static(publicPath))
 app.get('/',(req,res) => {
     res.sendFile(path.join(__dirname,'./views/home.html'))
 })
-app.listen(3000, () => {
-    console.log("servidor corriendo en e puerto 3000")
+const port= process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`servidor corriendo en el puerto http://${port}`)
 })
 
 app.get('/register', (req,res) => {
